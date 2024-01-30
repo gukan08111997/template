@@ -4,13 +4,24 @@
     margin:0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(./textile-bg.jpg);
+    background-size: contain;
+
+}
 /* styling for supplier-detail section  */
 #supplier-details,#transaction-details{
-    width:100%;
-    /* height:100vh; */
+    width:80%;
+margin:50px auto;
     padding:10px;
-    background-color: #FFD0EC;
+    background-color: #FFB534;
   
+}
+#supplier-details{
+    animation:movement1 1s;
+}
+#transaction-details{
+    animation:movement2 1s;
 }
 
 section h2{
@@ -19,7 +30,7 @@ section h2{
 section a{
     text-decoration: none;
     font-weight: 600;
-    color:black;
+    color:#5F0F40;
 }
 
 .container{
@@ -39,30 +50,47 @@ section a{
     width:80%;
 }
 .container div label{
-   color:#474F7A;
+   color:#5F0F40;
    font-size: 20px;
    font-weight: 600;
    margin-bottom:5px;
+   animation:movement3 1s 1s backwards;
 }
 
 .container div input{
     height:40px;
-    border-radius: 10px;
+    padding:10px;
+    font-size: 20px;
+    animation:movement3 1s 0.5s backwards;
 }
 .container div textarea{
     height:80px;
-    border:2px solid ;
-    border-radius: 20px;
+    font-size: 20px;
+    padding:10px;
     resize:none;
+    animation:movement3 1s 0.5s backwards;
 }
 
 .container+button{
-    width:150px;
+    width:100px;
     height:50px;
     border: none;
     border-radius: 20px;
     margin:5px 20px 10px 80%;
     cursor:pointer;
+    animation:movement3 1s 0.5s backwards;
+}
+@keyframes movement1 {
+    from{transform:translateX(100px);opacity:0}
+    to{transform:translateX(0);opacity:1}
+}
+@keyframes movement2 {
+    from{transform:translateX(-100px);opacity:0}
+    to{transform:translateX(0);opacity:1}
+}
+@keyframes movement3 {
+    from{transform:translateY(30px);opacity:0}
+    to{transform:translateY(0);opacity:1}
 }
 
 /* TRANSACTION SECTION DETAILS  */
@@ -78,7 +106,8 @@ section a{
 .grid-container div:nth-child(1),.grid-container div:nth-child(2),.grid-container div:nth-child(3),.grid-container div:nth-child(4){
     font-weight: 600;
     text-transform: uppercase;
-    color:#474F7A;
+    color:#fff;
+    background-color: #5F0F40;
 }
 .grid-container div{
     border:1px solid ;
