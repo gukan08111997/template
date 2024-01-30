@@ -7,7 +7,7 @@
 body{
     background-image: url(./textile-bg.jpg);
     background-size: contain;
-
+    background-attachment: fixed;
 }
 /* styling for supplier-detail section  */
 #supplier-details,#transaction-details{
